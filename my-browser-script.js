@@ -7,7 +7,7 @@ async function screenshots() {
 
   await page.goto("https://learnwebcode.com/")
   await page.setViewportSize({width: 640, height: 480})
-  await page.screenshot({path: "mobile_full.png", fullPage: true})
+  await page.screenshot({path: `mobile_${new Date().getTime()}.png`, fullPage: true})
   await browser.close()
 }
 
