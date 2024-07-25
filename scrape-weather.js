@@ -12,7 +12,10 @@ async function getWeatherData(url) {
 
   const [temperature] = await page.locator(".myforecast-current-lrg").allInnerTexts()
 
+  const [humidy] = await page.locator("#current_conditions_detail > table > tbody > tr:nth-child(1) > td:nth-child(2)").allInnerTexts()
+
   console.log(temperature)
+  console.log(humidy)
 
   await browser.close()
 }
