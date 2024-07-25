@@ -1,11 +1,13 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('my modal', async ({ page }) => {
+  await page.goto('https://learnwebcode.com/');
+
+  // await page.getByRole("button", {name: "See Plans"}).nth(1).click()
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  await expect(page.getByRole("heading", {name: "Choose Your Plan"})).toBeVisible()
 });
 
 test('get started link', async ({ page }) => {
