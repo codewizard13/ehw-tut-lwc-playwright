@@ -1,4 +1,5 @@
 // scrape-weather.js
+const fs = require("fs/promises")
 const  {chromium, firefox, webkit} = require("playwright")
 
 async function getWeatherData(url) {
@@ -14,9 +15,11 @@ async function getWeatherData(url) {
 
   const [humidy] = await page.locator("#current_conditions_detail > table > tbody > tr:nth-child(1) > td:nth-child(2)").allInnerTexts()
 
-  console.log(temperature)
-  console.log(humidy)
+  const OurObject = {
+    temperature, humidy
+  }
 
+  await fs.writeFile("ourWeather.json", JSON.stringify(OurObject))
   await browser.close()
 }
 
