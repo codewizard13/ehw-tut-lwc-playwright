@@ -47,10 +47,20 @@ Tutorial Info:
 - Avatar URL: https://yt3.ggpht.com/ytc/AIdro_n6R7J2xrV33Fiqh68fKvoqUgtsPU3SYYeyOFwT6tx3Kg=s88-c-k-c0x00ffffff-no-rj
 
 
-# PLUGINS & DEPENDENCIES
+## PLUGINS & DEPENDENCIES
 
 - **Playwright**: enables reliable end-to-end testing for modern web apps
 - **NodeJS**: Node.js lets developers use JavaScript to write command line tools and for server-side scripting
+
+## USAGE
+
+- Type `node` then the name of the script:
+
+```js
+node scrape-weather.js
+
+node my-browser-script.js
+```
 
 ## NOTES
 
